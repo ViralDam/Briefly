@@ -2,5 +2,5 @@
 
 - Viral Damaniya
 - Neha Mittal
-- Sree Lata
+- Sree Latha
 - Vijay 
