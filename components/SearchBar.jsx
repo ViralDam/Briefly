@@ -1,17 +1,11 @@
 import React from "react";
 import { StyleSheet, TextInput, Text, View, Keyboard, Button, Pressable } from "react-native";
-import { Feather, Entypo } from "@expo/vector-icons";
+import { Feather } from "@expo/vector-icons";
 
-const SearchBar = ({searchPhrase, setSearchPhrase, setCLicked, handleSubmit}) => {
+const SearchBar = ({searchPhrase, setSearchPhrase, handleSubmit}) => {
   return (
     <View style={styles.container}>
-      <View
-        style={styles.searchBar__unclicked
-        //   clicked
-        //     ? styles.searchBar__clicked
-            // : styles.searchBar__unclicked
-        }
-      >
+      <View style={styles.searchBar__unclicked}>
         {/* search Icon */}
         <Feather
           name="search"
@@ -28,26 +22,8 @@ const SearchBar = ({searchPhrase, setSearchPhrase, setCLicked, handleSubmit}) =>
           enablesReturnKeyAutomatically
           blurOnSubmit
           onSubmitEditing={handleSubmit}
-          onFocus={() => {
-            setCLicked(true);
-          }}
         />
-        {/* cross Icon, depending on whether the search bar is clicked or not */}
-        {/* {clicked && (
-          <Entypo name="cross" size={15} color="black" style={{ padding: 1, marginRight: 4 }} onPress={() => {
-              setSearchPhrase("")
-          }}/>
-        )} */}
       </View>
-      {/* cancel button, depending on whether the search bar is clicked or not
-      {clicked && (
-        <Pressable onPress={() => {
-            Keyboard.dismiss();
-            setCLicked(false);
-          }}>
-          <Text>Cancel</Text>
-        </Pressable>
-      )} */}
     </View>
   );
 };

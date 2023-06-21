@@ -172,6 +172,9 @@ const styles = StyleSheet.create({
         fontSize: 16,
         padding: '4%',
         fontWeight: '600',
+        textShadowColor: 'white',
+        textShadowOffset: {width: 2, height: 2},
+        textShadowRadius: 20,
     },
     shareView: {
         backgroundColor: 'white',
